@@ -42,6 +42,7 @@ const NavigationHeaderStyleInterpolator = require('./NavigationHeaderStyleInterp
 const ReactComponentWithPureRenderMixin = require('react-addons-pure-render-mixin');
 
 const {
+  ViewPropTypes,
   Animated,
   Platform,
   StyleSheet,
@@ -99,8 +100,8 @@ class NavigationHeader extends React.Component<DefaultProps, Props, any> {
     renderLeftComponent: PropTypes.func,
     renderRightComponent: PropTypes.func,
     renderTitleComponent: PropTypes.func,
-    style: View.propTypes.style,
-    viewProps: PropTypes.shape(View.propTypes),
+    style: ViewPropTypes.style,
+    viewProps: PropTypes.shape(ViewPropTypes),
   };
 
   shouldComponentUpdate(nextProps: Props, nextState: any): boolean {
